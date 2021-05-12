@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.string :titolo
       t.string :regista
       t.text :attori
-      t.sring :genere
+      t.string :genere
       t.text :trama
       t.integer :durata
 
