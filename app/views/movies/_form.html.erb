@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :'copertina' %>
+    <%= form.file_field :cover %>
+  </div>
+
+ 
+
+  <div class="field">
     <%= form.label :titolo %>
     <%= form.text_field :titolo %>
   </div>
@@ -42,6 +49,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salva', class: 'btn btn-primary w-100' %>
   </div>
 <% end %>

@@ -5,6 +5,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Locandina</th>
       <th>Titolo</th>
       <th>Regista</th>
       <th>Attori</th>
@@ -18,15 +19,16 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
+        <td><%= movie.cover %></td>
         <td><%= movie.titolo %></td>
         <td><%= movie.regista %></td>
         <td><%= movie.attori %></td>
         <td><%= movie.genere %></td>
         <td><%= movie.trama %></td>
         <td><%= movie.durata %></td>
-        <td><%= link_to 'Mostra', movie %></td>
-        <td><%= link_to 'Modifica', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Disruggi', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +36,4 @@
 
 <br>
 
-<%= link_to 'Nuovo film', new_movie_path %>
+<%= link_to 'New Movie', new_movie_path %>
